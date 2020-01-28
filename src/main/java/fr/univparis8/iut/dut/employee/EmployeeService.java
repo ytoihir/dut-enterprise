@@ -38,7 +38,7 @@ public class EmployeeService {
         if(!employeeRepository.existsById(employee.getId())) {
             throw new ObjectNotFoundException(String.format(NOT_FOUND_MESSAGE, employee.getId()));
         }
-        EmployeEntity savedEmployee = employeeRepository.save(EmployeeMapper.toEmployee((employee)));
+        EmployeeEntity savedEmployee = employeeRepository.save(EmployeeMapper.toEmployee((employee)));
         return EmployeeMapper.toEmployee(savedEmployee);
     }
 
@@ -50,7 +50,7 @@ public class EmployeeService {
         Employee currentEmployee = EmployeeMapper.toEmployee(employeeRepository.getOne(employee.getId()));
         Employee mergedEmployee = currentEmployee.mergeWith(employee);
 
-        EmployeEntity newEmployee = employeeRepository.save(EmployeeMapper.toEmployee(mergedEmployee));
+        EmployeeEntity newEmployee = employeeRepository.save(EmployeeMapper.toEmployee(mergedEmployee));
 
         return EmployeeMapper.toEmployee(newEmployee);
     }

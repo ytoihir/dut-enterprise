@@ -5,7 +5,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "employee")
-public class EmployeEntity {
+public class EmployeeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class EmployeEntity {
     @Column(name = "last_name")
     private String lastName;
 
-    public EmployeEntity() {
+    public EmployeeEntity() {
     }
 
     public Long getId() {
@@ -48,8 +48,8 @@ public class EmployeEntity {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof EmployeEntity)) return false;
-        EmployeEntity that = (EmployeEntity) o;
+        if (!(o instanceof EmployeeEntity)) return false;
+        EmployeeEntity that = (EmployeeEntity) o;
         return Objects.equals(id, that.id) &&
                 firstName.equals(that.firstName) &&
                 lastName.equals(that.lastName);
@@ -87,12 +87,12 @@ public class EmployeEntity {
             return this;
         }
 
-        public EmployeEntity build() {
-            EmployeEntity employeEntity = new EmployeEntity();
-            employeEntity.setId(id);
-            employeEntity.setFirstName(firstName);
-            employeEntity.setLastName(lastName);
-            return employeEntity;
+        public EmployeeEntity build() {
+            EmployeeEntity employeeEntity = new EmployeeEntity();
+            employeeEntity.setId(id);
+            employeeEntity.setFirstName(firstName);
+            employeeEntity.setLastName(lastName);
+            return employeeEntity;
         }
     }
 }

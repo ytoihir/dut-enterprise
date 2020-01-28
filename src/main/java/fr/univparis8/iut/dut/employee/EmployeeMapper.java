@@ -21,7 +21,7 @@ public final class EmployeeMapper {
                 .build();
     }
 
-    public static Employee toEmployee(EmployeEntity employee) {
+    public static Employee toEmployee(EmployeeEntity employee) {
         return Employee.EmployeeBuilder.create()
                 .withId(employee.getId())
                 .withFirstName(employee.getFirstName())
@@ -29,15 +29,15 @@ public final class EmployeeMapper {
                 .build();
     }
 
-    public static EmployeEntity toEmployee(Employee employee) {
-        return EmployeEntity.EmployeEntityBuilder.create()
+    public static EmployeeEntity toEmployee(Employee employee) {
+        return EmployeeEntity.EmployeEntityBuilder.create()
                 .withId(employee.getId())
                 .withFirstName(employee.getFirstName())
                 .withLastName(employee.getLastName())
                 .build();
     }
 
-    public static List<Employee> toEmployeesList(List<EmployeEntity> employeeEntities) {
+    public static List<Employee> toEmployeesList(List<EmployeeEntity> employeeEntities) {
         return employeeEntities.stream()
                 .map(EmployeeMapper::toEmployee)
                 .collect(Collectors.toList());
