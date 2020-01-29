@@ -53,18 +53,17 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "[\n\t{\n    \"firstName\": \"John\",\n    \"lastName\": \"SMITH\"\n\t},\n\t{\n    \"firstName\": \"Doctor\",\n    \"lastName\": \"WHO\"\n\t},\n\t{\n    \"firstName\": \"Sherlock\",\n    \"lastName\": \"HOLMES\"\n\t}\n]"
+					"raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"SMITH\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/employees/batch",
+					"raw": "http://localhost:8080/employees",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"employees",
-						"batch"
+						"employees"
 					]
 				}
 			},
